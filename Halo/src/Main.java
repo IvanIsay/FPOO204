@@ -4,14 +4,9 @@ public class Main {
     public static void main(String[] args) {
 
         //creamos Objeto = Instanciar objeto
-        Spartan jefeMaestro = new Spartan();
-        Spartan reach= new Spartan();
+        Spartan jefeMaestro = new Spartan("John 117",100,90,"Rifle de asalto");
+        Spartan reach= new Spartan("Emile",0,0,"Aguijoneador");
 
-        //asignamos los atributos del objeto
-        jefeMaestro.nombre = "John 117";
-        jefeMaestro.salud = 100;
-        jefeMaestro.escudo = 90;
-        jefeMaestro.armaPrincipal = "Rifle de asalto";
 
         //Usar sus metodos de Jefe maestro
         jefeMaestro.mostrarInfo();
@@ -20,19 +15,18 @@ public class Main {
         jefeMaestro.correr(true);
 
 
-        // Segundo Objeto Reach
-        reach.nombre = "Emile";
-        reach.salud = 0;
-        reach.escudo = 0;
-        reach.armaPrincipal = "Aguijoneador";
-
+        //Usar sus metodos de reach
         reach.mostrarInfo();
         reach.atacar("Grunt");
         reach.recargarArma(10);
         reach.correr(false);
 
+        //ejemplo de Get & Set con el objeto jefeMaestro
+        jefeMaestro.setNombre("Ivan Isay");
+        jefeMaestro.mostrarInfo();
+        System.out.println(jefeMaestro.getNombre());
 
-
+        //jefeMaestro.consultaCortana();
 
 
     }
